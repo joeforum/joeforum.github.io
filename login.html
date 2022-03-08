@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JoeForum || Login</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/faunadb@latest/dist/faunadb.js"></script>
+        <script src="postHandler.js"></script>
+        <style>
+            
+            @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap");
+            
+            
+                        html,body{
+                            font-family: "Poppins";
+                            background-color: #0f0f0f;
+                            color: white;
+                            text-align: center;
+                            padding-top: 50px;
+                            padding-bottom: 50px;
+            
+                
+                        }
+            
+                        button{
+                            margin-bottom: 10px;
+                            border: none;
+                            font-family: 'Poppins';
+                            font-size: 16px;
+                            cursor: pointer;
+                            border-radius: 5px;
+                            background-color: #0078d4;
+                            padding: 10px;
+                            padding-top: 10px;
+                            padding-left: 15px;
+                            padding-right: 15px;
+                            color: white;
+                            box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+            
+            
+            
+            
+                        }
+            
+                        button:hover{
+                            background-color: #005fa8;
+                        }
+            
+                        .body{
+                            text-align: center;
+                background-color: #333333;
+                padding:20px;
+                border-radius: 10px;
+                width: 50%;
+                margin: auto;
+                box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+
+                position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%); /* IE 9 */
+    -webkit-transform: translate(-50%, -50%); /* Chrome, Safari, Opera */
+
+            
+            
+                        }
+            
+                        h1{
+                            font-size: 40px;
+                        }
+            
+            
+                       
+            
+                        input{
+                            border: none;
+                            border-radius: 5px;
+                            background-color: #424242;
+                            height: 25px;
+                            width:100%;
+                            margin-bottom: 10px;
+                            margin-top: 10px;
+                            font-family: 'Poppins';
+                            font-size: 16px;
+                            color: white;
+                        }
+            
+                        textarea{
+                            border: none;
+                            border-radius: 5px;
+                            background-color: #424242;
+                            height: 50px;
+                            width:100%;
+                            margin-bottom: 10px;
+                            margin-top: 10px;
+                            font-family: 'Roboto';
+                            font-size: 16px;
+                            color: white;
+                            resize: vertical;
+                            
+            
+            
+                        }
+            
+                        .subheading{
+                            font-size: 20px;
+                            font-weight: bold;
+            
+                        }
+            
+                        
+                        .userInfoDiv{
+                            position: fixed;
+                            top: 0;
+                            left: 0;
+                            padding: 15px;
+                            margin-left: 10px;
+                            margin-top: 10px;
+                            z-index: 999;
+                        }
+            
+                        .logOutButton{
+            
+                            margin-bottom: 10px;
+                            border: none;
+                            font-family: 'Poppins';
+                            font-size: 16px;
+                            cursor: pointer;
+                            border-radius: 5px;
+                            background-color: #cf362b;
+                            padding: 10px;
+                            padding-top: 10px;
+                            padding-left: 15px;
+                            padding-right: 15px;
+                            color: black;
+                            box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+                        }
+                        .logOutButton:hover{
+            
+                            background-color: #9e2a21;
+                        }
+            
+                </style>
+    </head>
+    <body onload="checkIfLoggedIn()">
+        <div class="userInfoDiv">
+            <button><a href="index.html" style="color:white; text-decoration:none">Back To Home</a></button>
+        </div>
+        <div class="body">
+        <h1>JoeForum</h1>
+        <p>The best Instajoe Forum.</p><br>
+        <label class="subheading">Username</label><br>
+        <input id="username" type="text"><br><br>
+        <label  class="subheading">Password</label><br>
+        <input id="password" type="password"><br><br>
+        <button onclick="logIn()">Log In</button>
+        <button onclick="makeAccount()">Sign Up</button>
+        </div>
+    </body>
+</html>

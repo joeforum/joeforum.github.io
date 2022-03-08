@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JoeForum || Loading...</title>
+    <script src="https://cdn.jsdelivr.net/npm/faunadb@latest/dist/faunadb.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <script src="postHandler.js"></script>
+    <link rel="stylesheet" href="main.css">
+  </head>
+  <body onload="getPostStuff()">
+    <div class="navbar">
+    <label><i style="color: #0078d4;" class="fas fa-angle-double-right"></i><a style="margin-left: 10px;"></a><b>JoeForum</b></label>
+    <button id="signupbutton">Loading...</button>
+    <p style="padding-left: 10px;"></p>
+    <button><a href="index.html" style="color:white; text-decoration:none">Homepage</a></button>
+      </div>
+      <div class="segment">
+         <div style="background-color: #424242; border-top-left-radius:5px; border-top-right-radius: 5px; padding-top: 7px; padding-bottom: 7px;">
+            <label id="title" style="font-size: 20px;"><u>Loading...</u></label>
+         </div>
+   <div class="wrapper">
+       <div class="left2">
+        <label id="username">Loading...</label><br><br>
+        <img id="avatar" style="width:50%; border-radius:5px;" src="a"><br><br>
+        <label id="joindate" style="float:left; background-color: #404040; width:100%; font-size:14px; padding-top:5px; padding-bottom:5px; border-radius:2px;">Loading...</label><br>
+       </div>
+       <div id="content" class="right2">
+        Loading...
+       </div>
+   </div>
+   <div style="background-color: #424242; border-bottom-left-radius:5px; border-bottom-right-radius: 5px; padding-top: 4px; padding-bottom: 4px;">
+    <label style="font-size: 12px;" id="uploaddate">Loading...</label>
+ </div>
+    </div><br>
+    <div style="width: 50%;" class="segment">
+    <label style="font-size: 20px;" id="commentcount">Loading...</label><br><br>
+    <div id="commentinput" class="commentinput">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        <p id="leavecomment">Leave a comment</p><br>
+        <textarea id="commentText" class="commenttext"></textarea><br>
+        <button onclick="postComment()">Post</button><br>
+    </div><br><br>
+    <div id="comments"></div>
+    </div>
+</html>

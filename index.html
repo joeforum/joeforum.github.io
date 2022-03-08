@@ -1,0 +1,135 @@
+<html>
+<head>
+<title>JoeForum || Home</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+<script src="https://cdn.jsdelivr.net/npm/faunadb@latest/dist/faunadb.js"></script>
+<script src="postHandler.js"></script>
+</head>
+<style>
+
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+@import url(https://fonts.googleapis.com/css?family=Bree+Serif);
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap");
+
+
+
+input:focus {
+	outline:none;
+}
+
+.navbar {
+	overflow: hidden;
+	background-color: #1f1f1f;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	display: flex;
+    align-items: center;
+    z-index: 999;
+  }
+  
+  .navbar label {
+	float: left;
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	font-size: 23px;
+  }
+
+  * {
+	margin: 0;
+
+}
+
+
+
+
+body {
+  min-height: 100%;
+	font-family: 'Poppins';
+	background-color: #0f0f0f;
+    color: white;
+	padding-top: 90px;
+    padding-bottom: 90px;
+  }
+
+
+
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 80%;
+	margin: 100px auto;
+}
+
+.wrapper2 {
+    display: flex;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+  }
+
+
+
+.test{
+
+
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+}
+
+
+button{
+    cursor: pointer;
+    border: none;
+    color: white;
+    background-color: #0078d4;
+    font-family: 'Poppins';
+    padding:10px;
+   float: left;
+   border-radius: 5px;
+   box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+
+}
+button:hover{
+  background-color: #005fa8;
+}
+
+.left2 {
+    flex: 0 0 15%;
+    background-color: #545454;
+    padding: 10px;
+  }
+  
+  .right2 {
+    flex: 1;
+    background-color: #606060;
+    padding: 10px;
+    text-align: left;
+    position: relative;
+  }
+
+.body{
+                text-align: center;
+    background-color: #333333;
+    padding:20px;
+    border-radius: 10px;
+    width: 60%;
+    margin: auto;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+
+            }
+
+</style>
+<body onload="getForumStuff()">
+    <div class="navbar">
+		<label><i style="color: #0078d4;" class="fas fa-angle-double-right"></i><a style="margin-left: 10px;"></a><b>JoeForum</b></label>
+		<button id="signupbutton">Loading...</button>
+		  </div>
+	<div  id="posts">
+
+		
+
+	</div>
+</body>
